@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>music mixer</title>
+<link href="main.css" rel="stylesheet" type="text/css">
+
+
+<script>
+ var audio,playbtn,seek_bar;
+function initAudioPlayer(){
+	audio=new audio();
+	audio.src="audio/happy.mp3";
+	audio.loop=true;
+	audio.play();
+}
+window.addEventlistener("load",initAudioPlayer);
+
+</script>
+
+<script>
+
+var pic = Array("images1/1.jpg","images1/2.jpg","images1/3.jpg","images1/4.jpg");
+
+var j=0;
+
+function slider()
+{
+	s=window.document.abc;
+	s.src=pic[j];
+	if(j>1)
+	{
+		j=0;
+	}
+	else
+	{
+		j++;
+	}
+	
+	setTimeout("slider()",5000);
+}
+</script>
+<script>
+ function timer()
+ {
+
+	 var obj = new Date();
+	  var hour    =obj.getHours();
+	  var minutes =obj.getMinutes();
+	  var sec     =obj.getSeconds();
+        if(hour>12)
+		{
+			hour =hour-12;
+			s="PM";
+ 		}
+     else if(hour<12)
+	 {
+	 	s="AM";
+	 }
+	 
+	 fulltime=hour+":"+minutes+":"+sec+" "+s;
+	 document.getElementById("tt2").innerHTML=fulltime;
+	 
+	setTimeout("timer()",1000);
+
+ }
+ 
+ 
+
+</script>
+
+           <script language="JavaScript" type="text/javascript">
+ function timer()
+ {
+
+	 var obj = new Date();
+	  var hour    =obj.getHours();
+	  var minutes =obj.getMinutes();
+	  var sec     =obj.getSeconds();
+     //var s;  
+	   if(hour>12)
+		{
+			hour =hour-12;
+			s="PM";
+ 		}
+		else if(hour==12)
+		{
+			hour=hour;
+			s="PM";
+		}
+     else 
+	 {
+	 		s="AM";
+	 }
+	 
+	 
+	 
+	 fulltime=hour+":"+minutes+":"+sec+" "+s;
+	 document.getElementById("tt2").innerHTML=fulltime;
+	 
+	setTimeout("timer()",1000);
+
+ }
+ 
+ 
+
+</script>
+
+
+</head>
+<script type="text/javascript" src="engine2/jquery.js"></script>
+
+	
+	
+
+<body>
+	
+<div class="timer">
+	
+
+<font style="margin-left:105px; float:left; margin-top:7px; width:350px;color:#FFF;font-size:30px;" >
+<script language="JavaScript" type="text/javascript">
+var mydate=new Date()
+var year=mydate.getYear()
+if (year < 1000)
+  year+=1900
+var day=mydate.getDay()
+var month=mydate.getMonth()
+var daym=mydate.getDate()
+if (daym < 10)
+  daym="0"+daym
+var dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+document.write("&nbsp;"+dayarray[day]+", "+montharray[month]+" "+daym+", "+year+"&nbsp;")
+</script>
+
+		
+
+</font>
+<font id="tt2" style="margin-top:7px; float:left;color:#FFF;font-size:24px;">
+<script>
+timer();
+</script>
+</font>
+
+
+
+</div>
+
+<audio id="myAudio">
+		 
+   <source src="myAudio/happy.mp3" type="audio/mpeg">
+  <source src="myAudio/Bambiha Bole - Sidhu Moose Wala (DjPunjab.Com).mp3" type="audio/mpeg">
+			 
+  <source src="myAudio/So Far - Karan Aujla (DjPunjab.Com).mp3" type="audio/mpeg">
+			
+  <source src="myAudio/Ajj Kal Ajj Kal - Nimrat Khaira (DjPunjab.Com).mp3" type="audio/mpeg">
+			 
+ 
+</audio> 	
+
+
+<div class="top">
+	<div class="top1">
+     <div class="top2">
+    
+     	<button onclick="pauseAudio()" type="button" class="btn">Pause</button>
+		<button onclick="playAudio()" type="button"  class="btn1"> sidhu </button>
+		<button onclick="playAudio()" type="button"  class="btn2">karn</button>
+		<button onclick="playAudio()" type="button"  class="btn3">nimrat</button>
+		<button onclick="playAudio()" type="button"  class="btn4">varinder</button>
+		 
+     </div>
+       <div class="top3">
+       	<img src="images1/1.jpg" name="abc" class="img" />
+
+
+
+        <script>slider();</script>
+
+
+
+       </div>
+       <div class="top4">
+       	
+       
+         <button onclick="pauseAudio()" type="button" class="btn">reset</button>
+		<button onclick="playAudio()" type="button"  class="btn1"> sidhu </button>
+		<button onclick="playAudio()" type="button"  class="btn2">karn</button>
+		<button onclick="playAudio()" type="button"  class="btn3">nimrat</button>
+		<button onclick="playAudio()" type="button"  class="btn4">varinder</button>
+		 
+       </div>
+
+
+
+
+
+
+    </div>
+	</div>
+	<div class="bottem">
+     <div class="b1"><img src="images1/1.jpg" class="img2"></div>
+     <div class="b2"><img src="images1/2.jpg" class="img2"></div>
+      <div class="b3"><img src="images1/3.jpg" class="img2"></div>
+
+
+
+	</div>
+
+	<script>
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+		var x = document.getElementById("myAudio"); 
+		function nimrat() { 
+  x.play(); 
+} 
+		var x = document.getElementById("myAudio"); 
+		function sidthu() { 
+  x.play(); 
+} 
+		var x = document.getElementById("myAudio"); 
+		function karn() { 
+  x.play(); 
+} 
+
+function varinder() { 
+  x.pause(); 
+} 
+</script>
+</body>
+</html>
