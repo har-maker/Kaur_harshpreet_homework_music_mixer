@@ -1,6 +1,6 @@
 # Music Mixer
 
-![readme](/images/greyjoy.jpg)
+
 
 ## Information description of Music mixer assignment
 
